@@ -7,6 +7,8 @@ public class ReplyVO {
 	int rno,bno;
 	String replytext,replyer;
 	Timestamp regdate,updatedate;
+	
+	
 	public int getRno() {
 		return rno;
 	}
@@ -48,6 +50,8 @@ public class ReplyVO {
 		return "ReplyVO [rno=" + rno + ", bno=" + bno + ", replytext=" + replytext + ", replyer=" + replyer
 				+ ", regdate=" + regdate + ", updatedate=" + updatedate + "]";
 	}
+	
+	
 	
 	
 	

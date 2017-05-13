@@ -28,4 +28,8 @@
 		select count(*) from tbl_reply where rno>0 and bno=${bno}
   </select>
   
+  <select id="getBno" resultType="int" parameterType="org.zerock.domain.ReplyVO">
+  select bno from tbl_reply where rno = ${rno}
+  </select>
+  
   </mapper>

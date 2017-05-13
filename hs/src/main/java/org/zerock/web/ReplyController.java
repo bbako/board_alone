@@ -68,7 +68,10 @@ public class ReplyController {
 		logger.info(vo);
 		
 		ResponseEntity<String> entity=null;
+		
 		reservice.recreate(vo);
+		logger.info("reply post success");
+		
 		entity= new ResponseEntity<String>("success",HttpStatus.OK);
 		
 		logger.info(entity);

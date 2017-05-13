@@ -53,4 +53,9 @@ public class ReplyDAOImpl implements ReplyDAO {
 		return sess.selectOne(namespace + ".retotal", vo);
 	}
 
+	@Override
+	public int getBno(ReplyVO vo) {
+		return sess.selectOne(namespace+".getBno", vo);
+	}
+
 }

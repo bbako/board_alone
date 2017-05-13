@@ -1,6 +1,8 @@
 package org.zerock.persistence;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import javax.inject.Inject;
 
@@ -55,6 +57,23 @@ public class BoardDAOImpl implements BoardDAO {
 	@Override
 	public void modify(BoardVO vo) {
 		sess.update(namespace + ".update", vo);
+	}
+
+	@Override
+	public void updateReCnt(int bno, int amount) {
+
+		Map<String, Object> prmap = new HashMap<String, Object>();
+		
+		prmap.put("bno",bno);
+		prmap.put("amount",amount);
+		
+		sess.update(namespace+".updateReCnt", prmap);
+	}
+
+	@Override
+	public void addAttach(String fullName) {
+
+		sess.insert(namespace+".addAttach", fullName);
 	}
 
 }

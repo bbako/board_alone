@@ -9,7 +9,7 @@
 
 	<div class="panel panel-danger">
 		<div class="panel-heading">
-			<h1>List</h1>
+			<h1>List <button type="button" class="btn btn-default"><a href="/register" >새글 등록</a></button></h1>
 		</div>
 		<div class="panel-body">
 			<table class="table table-striped">
@@ -27,7 +27,7 @@
 						<c:forEach items="${list}" var="list">
 							<tr>
 								<td>${list.bno}</td>
-								<td><a class="goSub" href="${list.bno}">${list.title}</a></td>
+								<td><a class="goSub" href="${list.bno}">${list.title}(${list.replycnt})</a></td>
 								<td>${list.content}</td>
 								<td>${list.writer}</td>
 								<td>${list.regdate}</td>
@@ -89,12 +89,6 @@
 				</form>
 
 
-			</div>
-			
-			<div class="panel panel-success">
-			  <div class="panel-heading"><h5><a href="/register" class="btn btn-success btn-lg active"
-				role="button">새글 등록</a></h5></div>
-			  
 			</div>
 			
 		</div>

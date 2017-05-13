@@ -20,4 +20,8 @@ public interface BoardDAO {
 	public void delete(int bno);
 	
 	public void modify(BoardVO vo);
+	
+	public void updateReCnt(int bno, int amount);
+	
+	public void addAttach(String fullName);
 }

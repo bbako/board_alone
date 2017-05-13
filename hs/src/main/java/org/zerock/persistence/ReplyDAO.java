@@ -18,4 +18,6 @@ public interface ReplyDAO {
 	
 	public int retotal(BoardVO vo);
 	
+	public int getBno(ReplyVO vo);
+	
 }

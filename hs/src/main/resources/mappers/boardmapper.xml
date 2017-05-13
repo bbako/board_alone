@@ -65,6 +65,14 @@
 	update tbl_board set title = '${title}', content='${content}', writer='${writer}', updatedate=now() where bno= ${bno}
 	
 	</update>
+	
+	<update id="updateReCnt">
+	update tbl_board set replycnt = replycnt + #{amount} where bno = #{bno}
+	</update>
+	
+	<insert id="addAttach">
+	insert into tbl_attach(fullname, bno) values (#{fullName}, LAST_INSERT_ID())
+	</insert>
 
 
 </mapper>

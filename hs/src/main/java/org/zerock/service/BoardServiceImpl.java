@@ -5,9 +5,11 @@ import java.util.List;
 import javax.inject.Inject;
 
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.zerock.domain.BoardVO;
 import org.zerock.domain.Criteria;
 import org.zerock.persistence.BoardDAO;
+import org.zerock.persistence.ReplyDAO;
 
 @Service
 public class BoardServiceImpl implements BoardService {
@@ -20,9 +22,21 @@ public class BoardServiceImpl implements BoardService {
 		return dao.listAll(cri);
 	}
 
+	@Transactional
 	@Override
 	public void regist(BoardVO vo) {
 		dao.creat(vo);
+		
+		String[] files = vo.getFiles();
+		
+		if(files == null){
+			return;
+			
+		}
+		for(String fileName : files){
+			
+			dao.addAttach(fileName);
+		}
 	}
 
 	@Override
