@@ -24,9 +24,41 @@
 				name="writer" placeholder="writer">
 
 		</div>
-
 		
+		<div class="form-group">
+		<label>file upload</label>
+		<div class="fileDrop"></div>
+		
+		</div>
+		
+		<div class="box-footer">
+		<div>
+		<hr>
+		</div>
+		
+		<ul id="uploadedList" class="mailbox-attachments clearfix uploadedList" >
+		
+	
+		
+	
+		
+		
+		</ul>
+		
+		</div>
+
 	</form>
+	
+	<style>
+	.fileDrop {
+	width :100%;
+	height:100px;
+	border:1px dotted gray;
+	background-color : #ccf5ff;
+	amrgin: auto;
+	}
+	
+	</style>
 	
 	<button id="regiBtn" class="btn btn-default">
 			<a>등록</a>
@@ -38,6 +70,31 @@
 
   </div>
 </div>
+
+
+
+
+
+<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src = "/resources/js/upload.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.1/handlebars.js"></script>
+ <script id="template" type="text/x-handlebars-template">
+
+	<li>
+		<span class="mailbox-attachment-icon has-img"><img src="{{imgsrc}}" alt="Attachment"></span>
+		<div class="mailvox-attachment-info">
+		<a href="{{getLink}}" class="mailbox-attachment-name" >{{fileName}}</a>
+		<a href="{{fullName}}" class="btn btn-default btn-xs pull-right delbtn"><i class="fa fa-fw" fa-remove></i></a>
+		
+		</div>
+		
+
+		</li>
+
+
+</script>
+
+
 
 
 
@@ -68,6 +125,54 @@
 				}
 				
 			})
+			
+			
+			var template = Handlebars.compile($("#template").html());
+			
+			$(".fileDrop").on("dragenter dragover", function(event){
+	            event.preventDefault(); 
+	        });
+	        $(".fileDrop").on("drop", function(event){
+	            event.preventDefault();
+				
+				console.log("drag drop!!!!!!")
+				
+				var files = event.originalEvent.dataTransfer.files;
+				var file = files[0];
+				
+				console.log(files);
+				
+				console.log(file)
+				
+				var formData = new FormData();
+				
+				formData.append("file",file);					
+			
+				$.ajax({
+					
+					url:'/uploadAjax',
+					data:formData,
+					dataType:'text',
+					processData: false,
+					contentType: false,
+					type :'post',
+					success: function(data){
+						
+						var fileInfo = getFileInfo(data);
+						
+						var html = template(fileInfo);
+						$("#uploadedList").append(html);
+					}
+					
+					
+					
+				})
+				
+				
+			})
+
+			
+			
 
 		})
 	</script>
