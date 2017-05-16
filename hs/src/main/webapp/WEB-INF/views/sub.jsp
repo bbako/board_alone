@@ -195,9 +195,9 @@
 						 dateString = regDate2.toLocaleString();
 						 dateString2 = updateDate2.toLocaleString();
 						 
-						 
+						 var n = parseInt((replyPage-1)*10) + parseInt(i++);
 						
-							str+="<tr ><td>"+i++ +"</td>"
+							str+="<tr ><td>"+n+"</td>"
 							str+="<td>"+this.replyer+"</td>"
 							str+="<td>"+this.replytext+"</td>"
 							str+="<td>"+dateString+"</td>"
