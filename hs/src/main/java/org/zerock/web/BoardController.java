@@ -56,6 +56,8 @@ public class BoardController {
 		service.regist(vo);
 
 		//rttr.addFlashAttribute("msg", "SUCCESS");
+		
+		
 
 		return "redirect:/board/main";
 

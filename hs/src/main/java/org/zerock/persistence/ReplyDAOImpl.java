@@ -58,4 +58,9 @@ public class ReplyDAOImpl implements ReplyDAO {
 		return sess.selectOne(namespace+".getBno", vo);
 	}
 
+	@Override
+	public void deleteall(BoardVO vo) {
+sess.delete(namespace+".redeleteall", vo);		
+	}
+
 }
