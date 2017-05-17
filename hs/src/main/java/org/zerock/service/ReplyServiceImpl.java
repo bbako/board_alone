@@ -17,13 +17,13 @@ public class ReplyServiceImpl implements ReplyService {
 
 	@Inject
 	ReplyDAO dao;
-	
+
 	@Inject
 	BoardDAO bodao;
 
 	@Override
-	public List<ReplyVO> read(int bno,Criteria cri) {
-		return dao.read(bno,cri);
+	public List<ReplyVO> read(int bno, Criteria cri) {
+		return dao.read(bno, cri);
 	}
 
 	@Transactional
@@ -40,7 +40,6 @@ public class ReplyServiceImpl implements ReplyService {
 
 	}
 
-	
 	@Transactional
 	@Override
 	public void redelete(ReplyVO vo) {
@@ -52,6 +51,11 @@ public class ReplyServiceImpl implements ReplyService {
 	@Override
 	public int retotal(BoardVO vo) {
 		return dao.retotal(vo);
+	}
+
+	@Override
+	public void redeleteall(BoardVO vo) {
+		dao.deleteall(vo);
 	}
 
 }

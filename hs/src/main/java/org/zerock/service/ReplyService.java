@@ -17,4 +17,6 @@ public interface ReplyService {
 	public void redelete(ReplyVO vo);
 	
 	public int retotal(BoardVO vo);
+	
+	public void redeleteall(BoardVO vo);
 }
