@@ -62,7 +62,7 @@
 	
 	<button id="regiBtn" class="btn btn-default">
 			<a>등록</a>
-		</button>
+	</button>
 
 	<button class="btn btn-default">
 		<a href="/board/main">취소</a>
@@ -170,11 +170,8 @@
 				
 				
 			})
-
 			
-			
-
-		})
+	})
 	</script>
 
 </body>

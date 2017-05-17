@@ -28,14 +28,11 @@ public class UploadController {
 	public ResponseEntity<String> uploadPost(MultipartFile file) throws IOException{
 		
 		logger.info("upload post!!!!!");
-		
 		logger.info("originalName: " + file.getOriginalFilename());
 		logger.info("size: " + file.getSize());
 		logger.info("contentType: "+file.getContentType());
 		
-		
 		return new ResponseEntity<>(UploadFileUtils.uploadFile(uploadPath , file.getOriginalFilename(), file.getBytes()),HttpStatus.OK);
-		
 		
 	}
 	
