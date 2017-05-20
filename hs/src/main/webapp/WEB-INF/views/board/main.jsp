@@ -20,6 +20,7 @@
 					<td>글쓴이</td>
 					<td>작성날짜</td>
 					<td>최근수정날짜</td>
+					<td>첨부파일 갯수</td>
 				</tr>
 
 				<c:choose>
@@ -32,6 +33,7 @@
 								<td>${list.writer}</td>
 								<td>${list.regdate}</td>
 								<td>${list.updatedate}</td>
+								<td>${list.filescnt}</td>
 							</tr>
 						</c:forEach>
 

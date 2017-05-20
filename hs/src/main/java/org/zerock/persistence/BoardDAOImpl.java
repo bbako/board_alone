@@ -76,4 +76,12 @@ public class BoardDAOImpl implements BoardDAO {
 		sess.insert(namespace+".addAttach", fullName);
 	}
 
+	@Override
+	public List<String> getFiles(int bno) {
+
+		return sess.selectList(namespace+".getFiles", bno);
+	}
+
+	
+	
 }

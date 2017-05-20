@@ -24,4 +24,6 @@ public interface BoardDAO {
 	public void updateReCnt(int bno, int amount);
 	
 	public void addAttach(String fullName);
+	
+	public List<String> getFiles(int bno);
 }

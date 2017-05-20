@@ -40,6 +40,18 @@
 					type="hidden" value="${cri.keyword}" name="keyword">
 
 			</form>
+			
+			
+			<c:forEach items="flist" var="files">
+			<ul>
+			<li>
+			<img src="display?fileName="+files>
+			</li>
+			</ul>
+			</c:forEach>
+			
+			
+			
 			<div class="btn-group" role="group" aria-label="...">
 
 				<button type="button" class="btn btn-default" id='turn'>전체

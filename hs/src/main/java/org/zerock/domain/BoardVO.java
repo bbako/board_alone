@@ -2,28 +2,36 @@ package org.zerock.domain;
 
 import java.sql.Timestamp;
 import java.util.Arrays;
+import java.util.List;
 
 public class BoardVO {
 	
-	int bno, viewcnt, replycnt;
+	int bno, viewcnt, replycnt, filescnt;
 	String title,content,writer;
 	Timestamp regdate,updatedate;
 	String[] files;
 	
 	
 	
-	public int getViewcnt() {
-		return viewcnt;
-	}
-	public void setViewcnt(int viewcnt) {
-		this.viewcnt = viewcnt;
-	}
 	public String[] getFiles() {
 		return files;
 	}
 	public void setFiles(String[] files) {
 		this.files = files;
 	}
+	public int getFilescnt() {
+		return filescnt;
+	}
+	public void setFilescnt(int filescnt) {
+		this.filescnt = filescnt;
+	}
+	public int getViewcnt() {
+		return viewcnt;
+	}
+	public void setViewcnt(int viewcnt) {
+		this.viewcnt = viewcnt;
+	}
+	
 	public int getReplycnt() {
 		return replycnt;
 	}
@@ -68,9 +76,9 @@ public class BoardVO {
 	}
 	@Override
 	public String toString() {
-		return "BoardVO [bno=" + bno + ", viewcnt=" + viewcnt + ", replycnt=" + replycnt + ", title=" + title
-				+ ", content=" + content + ", writer=" + writer + ", regdate=" + regdate + ", updatedate=" + updatedate
-				+ ", files=" + Arrays.toString(files) + "]";
+		return "BoardVO [bno=" + bno + ", viewcnt=" + viewcnt + ", replycnt=" + replycnt + ", filescnt=" + filescnt
+				+ ", title=" + title + ", content=" + content + ", writer=" + writer + ", regdate=" + regdate
+				+ ", updatedate=" + updatedate + ", files=" + Arrays.toString(files) + "]";
 	}
 	
 	

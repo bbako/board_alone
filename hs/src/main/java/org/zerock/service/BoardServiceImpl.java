@@ -25,6 +25,7 @@ public class BoardServiceImpl implements BoardService {
 	@Transactional
 	@Override
 	public void regist(BoardVO vo) {
+		
 		dao.creat(vo);
 		
 		String[] files = vo.getFiles();
@@ -57,6 +58,12 @@ public class BoardServiceImpl implements BoardService {
 	@Override
 	public void modify(BoardVO vo) {
 		dao.modify(vo);
+	}
+
+	@Override
+	public List<String> getFiles(int bno) {
+		
+		return dao.getFiles(bno);
 	}
 
 }
