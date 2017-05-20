@@ -33,9 +33,7 @@ public class SubController {
 	public void subGet(BoardVO vo, Model model, Criteria cri){
 		logger.info("sub get!!!!");
 		logger.info(vo);
-		logger.info(cri);		
-		logger.info(cri.getPage());	
-		
+	
 		vo = service.read(vo.getBno());		
 
 		logger.info("flist------------------------------------");
@@ -46,7 +44,6 @@ public class SubController {
 		for (int i = 0; i < service.getFiles(vo.getBno()).size(); i++) {
 			
 			flist.add(service.getFiles(vo.getBno()).get(i));
-			System.out.println(flist.toString());
 			
 		}
 		

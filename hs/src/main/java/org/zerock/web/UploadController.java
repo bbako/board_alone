@@ -22,8 +22,6 @@ public class UploadController {
 	
 	@ResponseBody
 	@PostMapping( produces = "application/text; charset=utf8")
-
-
 	public String uploadPost(MultipartFile file) throws IOException{
 		 
 		logger.info("upload post!!!!!");
