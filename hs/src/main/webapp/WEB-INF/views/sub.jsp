@@ -47,7 +47,7 @@
 			<c:forEach items="${flist}" var="files">
 			<li>
 					
-			<img src="display?fileName=${files}">
+			<img src="display?fileName=${files}" width="400px">
 			
 			</li>
 			</c:forEach>

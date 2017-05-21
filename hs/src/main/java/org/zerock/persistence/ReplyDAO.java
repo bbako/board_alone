@@ -20,6 +20,6 @@ public interface ReplyDAO {
 	
 	public int getBno(ReplyVO vo);
 	
-	public void deleteall(BoardVO vo);
+	public void deleteall(BoardVO vo);	
 	
 }

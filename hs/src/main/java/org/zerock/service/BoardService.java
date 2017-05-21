@@ -20,4 +20,6 @@ public interface BoardService {
 	public void modify(BoardVO vo);
 	
 	public List<String> getFiles(int bno);
+	
+	public void delfile(int bno);
 }

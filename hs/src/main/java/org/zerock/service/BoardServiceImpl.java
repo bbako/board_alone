@@ -25,17 +25,17 @@ public class BoardServiceImpl implements BoardService {
 	@Transactional
 	@Override
 	public void regist(BoardVO vo) {
-		
+
 		dao.creat(vo);
-		
+
 		String[] files = vo.getFiles();
-		
-		if(files == null){
+
+		if (files == null) {
 			return;
-			
+
 		}
-		for(String fileName : files){
-			
+		for (String fileName : files) {
+
 			dao.addAttach(fileName);
 		}
 	}
@@ -62,8 +62,13 @@ public class BoardServiceImpl implements BoardService {
 
 	@Override
 	public List<String> getFiles(int bno) {
-		
+
 		return dao.getFiles(bno);
+	}
+
+	@Override
+	public void delfile(int bno) {
+		dao.delfile(bno);
 	}
 
 }

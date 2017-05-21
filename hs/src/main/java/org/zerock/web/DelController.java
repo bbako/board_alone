@@ -26,6 +26,7 @@ public class DelController {
 		logger.info(vo.toString());
 		
 		reservice.redeleteall(vo);
+		service.delfile(vo.getBno());
 		service.delete(vo.getBno());
 		
 		return "redirect:board/main";

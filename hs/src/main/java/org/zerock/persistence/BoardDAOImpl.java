@@ -63,25 +63,28 @@ public class BoardDAOImpl implements BoardDAO {
 	public void updateReCnt(int bno, int amount) {
 
 		Map<String, Object> prmap = new HashMap<String, Object>();
-		
-		prmap.put("bno",bno);
-		prmap.put("amount",amount);
-		
-		sess.update(namespace+".updateReCnt", prmap);
+
+		prmap.put("bno", bno);
+		prmap.put("amount", amount);
+
+		sess.update(namespace + ".updateReCnt", prmap);
 	}
 
 	@Override
 	public void addAttach(String fullName) {
 
-		sess.insert(namespace+".addAttach", fullName);
+		sess.insert(namespace + ".addAttach", fullName);
 	}
 
 	@Override
 	public List<String> getFiles(int bno) {
 
-		return sess.selectList(namespace+".getFiles", bno);
+		return sess.selectList(namespace + ".getFiles", bno);
 	}
 
-	
-	
+	@Override
+	public void delfile(int bno) {
+		sess.delete(namespace + ".delAllFile", bno);
+	}
+
 }

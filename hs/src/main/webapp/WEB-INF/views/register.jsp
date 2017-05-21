@@ -143,7 +143,7 @@
 						console.log("------------------")
 						console.log(data)
 						console.log(data.name)
-						var str = "<li><img src='display?fileName="+data+"'width:'42px' height='42px'><button id='delBtn'>DELETE</button></li><input name='files' type='hidden' value='"+data+"'>"
+						var str = "<li><img src='display?fileName="+data+"'height='100px'><button id='delBtn'>DELETE</button></li><input name='files' type='hidden' value='"+data+"'>"
 						
 						$(".uploadedList").append(str);
 				

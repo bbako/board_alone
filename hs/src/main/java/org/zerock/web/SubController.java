@@ -37,14 +37,17 @@ public class SubController {
 		vo = service.read(vo.getBno());		
 
 		logger.info("flist------------------------------------");
-		logger.info(service.getFiles(vo.getBno()));
-		logger.info(service.getFiles(vo.getBno()).get(0));
-		logger.info(service.getFiles(vo.getBno()).size());
 		List<String> flist = new ArrayList<String>();
-		for (int i = 0; i < service.getFiles(vo.getBno()).size(); i++) {
+		
+		if (service.getFiles(vo.getBno())!=null) {
 			
-			flist.add(service.getFiles(vo.getBno()).get(i));
+			logger.info(service.getFiles(vo.getBno()));
 			
+			for (int i = 0; i < service.getFiles(vo.getBno()).size(); i++) {
+				
+				flist.add(service.getFiles(vo.getBno()).get(i));
+				
+			}
 		}
 		
 		

@@ -48,9 +48,7 @@ public class ReplyController {
 		map.put("list", list);
 		map.put("pageMaker", pagemaker);
 		
-		ResponseEntity<Map<String, Object>> entity=null;
-		
-		logger.info(reservice.read(vo.getBno(),cri));
+		ResponseEntity<Map<String, Object>> entity=null;		
 		
 		entity= new ResponseEntity<Map<String, Object>>(map,HttpStatus.OK);
 		

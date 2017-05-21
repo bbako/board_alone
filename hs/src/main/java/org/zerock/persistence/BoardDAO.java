@@ -26,4 +26,6 @@ public interface BoardDAO {
 	public void addAttach(String fullName);
 	
 	public List<String> getFiles(int bno);
+	
+	public void delfile(int bno);
 }
