@@ -42,12 +42,12 @@
 			</form>
 			
 			
-			<ul>
+			<ul class="list-unstyled" >
 		
 			<c:forEach items="${flist}" var="files">
 			<li>
 					
-			<img src="display?fileName=${files}" width="400px">
+			<img src="display?fileName=${files}" width="100%">
 			
 			</li>
 			</c:forEach>

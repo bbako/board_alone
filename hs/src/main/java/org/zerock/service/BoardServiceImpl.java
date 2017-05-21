@@ -9,7 +9,6 @@ import org.springframework.transaction.annotation.Transactional;
 import org.zerock.domain.BoardVO;
 import org.zerock.domain.Criteria;
 import org.zerock.persistence.BoardDAO;
-import org.zerock.persistence.ReplyDAO;
 
 @Service
 public class BoardServiceImpl implements BoardService {

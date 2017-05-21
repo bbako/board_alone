@@ -5,7 +5,6 @@ import java.io.IOException;
 import java.util.UUID;
 
 import org.apache.log4j.Logger;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.util.FileCopyUtils;
 import org.springframework.web.bind.annotation.GetMapping;

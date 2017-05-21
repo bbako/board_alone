@@ -2,7 +2,6 @@ package org.zerock.domain;
 
 import java.sql.Timestamp;
 import java.util.Arrays;
-import java.util.List;
 
 public class BoardVO {
 	
