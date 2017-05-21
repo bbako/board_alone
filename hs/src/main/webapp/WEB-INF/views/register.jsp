@@ -18,7 +18,7 @@
 				</div>
 				<div class="form-group">
 					<label>content</label>
-					<textarea id="icontext" type="text" class="form-control"
+					<textarea id="icontext" class="form-control"
 						name="content" rows="4" placeholder="content"></textarea>
 
 				</div>
